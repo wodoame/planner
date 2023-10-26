@@ -1,0 +1,108 @@
+{% extends 'core/base.html' %}
+{% block title %}Events{% endblock %}
+
+{% block main_content %}
+<div class="lg:tw-p-4 tw-p-2">
+    {% if today %}
+      <div>
+        <h3 class="tw-underline tw-underline-offset-8 m-2 mb-4">Events Today</h3>
+      </div>
+      <div class="cards mt-2 tw-grid lg:tw-grid-cols-3 tw-items-start">
+            {% for task in today %}
+            <div class="card shadow-sm m-2 p-3 tw-border-s-4 tw-border-s-{{task.label.theme}}">
+                 <div class="tw-flex tw-justify-between">
+                    <h4 class="tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden">{{task.title}}</h4>
+                    <div class="tw-w-6">
+                        <svg class="tw-stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="12" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="18" r="1.5" fill="#ffffff"></circle> </g></svg>
+                    </div>
+    
+                 </div>
+                <p>
+                   {{task.description}}
+                </p>
+    
+                <div class="tw-text-slate-500">
+                    <div>
+                        created on: {{task.date_created}}
+                    </div>
+                    <div>
+                        status: {{task.status}}
+                    </div>
+                    <div>
+                        deadline: {{task.deadline}}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+      </div>
+    {% endif %}
+    
+    {% if tomorrow %}
+      <div>
+        <h3 class="tw-underline tw-underline-offset-8 m-2 mt-4 mb-4">Tomorrow</h3>
+      </div>
+      <div class="cards mt-2 tw-grid lg:tw-grid-cols-3 tw-items-start">
+            {% for task in tomorrow %}
+            <div class="card shadow-sm m-2 p-3 tw-border-s-4 tw-border-s-{{task.label.theme}}">
+                 <div class="tw-flex tw-justify-between">
+                    <h4 class="tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden">{{task.title}}</h4>
+                    <div class="tw-w-6">
+                        <svg class="tw-stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="12" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="18" r="1.5" fill="#ffffff"></circle> </g></svg>
+                    </div>
+    
+                 </div>
+                <p>
+                   {{task.description}}
+                </p>
+    
+                <div class="tw-text-slate-500">
+                    <div>
+                        created on: {{task.date_created}}
+                    </div>
+                    <div>
+                        status: {{task.status}}
+                    </div>
+                    <div>
+                        deadline: {{task.deadline}}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    
+    {% if upcoming %}
+      <div>
+        <h3 class="tw-underline tw-underline-offset-8 m-2 mt-4 mb-4">Upcoming Events</h3>
+      </div>
+      <div class="cards mt-2 tw-grid lg:tw-grid-cols-3 tw-items-start">
+            {% for task in upcoming %}
+            <div class="card shadow-sm m-2 p-3 tw-border-s-4 tw-border-s-{{task.label.theme}}">
+                 <div class="tw-flex tw-justify-between">
+                    <h4 class="tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden">{{task.title}}</h4>
+                    <div class="tw-w-6">
+                        <svg class="tw-stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="12" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="18" r="1.5" fill="#ffffff"></circle> </g></svg>
+                    </div>
+    
+                 </div>
+                <p>
+                   {{task.description}}
+                </p>
+    
+                <div class="tw-text-slate-500">
+                    <div>
+                        created on: {{task.date_created}}
+                    </div>
+                    <div>
+                        status: {{task.status}}
+                    </div>
+                    <div>
+                        deadline: {{task.deadline}}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+</div>
+{% endblock %}

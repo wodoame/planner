@@ -1,0 +1,23 @@
+What do I need for this  new planner application ?
+
+1. You need to be able to add a task
+2. You need to be able to set a date that you want it to be completed
+3. Tasks can be grouped according to days, weeks, months
+4. Tasks can be grouped by labels like education, personal,...
+4. If tasks are not complete they will be tagged as expired but not deleted
+5. Expired tasks can be recycled 
+6. A warning time can be set to allow the user to be prompted about the deadline for the task
+7. Task should have title, description (optional since the title my be descriptive enough)
+
+Implementation ideas
+1. I need a user model (The default django user model will suffice unless I need some additional fields I can't think of now)
+   I think it will be best to subclass AbstractUser just for future purposes
+2. A user is going to able have many task which is a one-to-many relationship from User to Task
+3. 
+4.
+
+
+Frontend Stack
+1. I am going to use html, css and javascript
+2. I am going to use bootstrap and write some custom css
+3. I might use some tailwind also (wish me luck)
