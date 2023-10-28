@@ -24,13 +24,13 @@ class Label(models.Model):
     theme = models.CharField(max_length=128, choices=label_themes, null=True)
     
     def __str__(self) -> str:
-        return self.title[:25] + '...'
+        return self.title
     
     
 class Task(models.Model): 
     label = models.ForeignKey(Label, on_delete=models.SET_NULL, related_name='tasks', null=True)
     title = models.CharField(max_length=128)
-    description = models.CharField(max_length=255, null=True, blank=True)
+    description = models.TextField(max_length=255, null=True, blank=True)
     deadline = models.DateTimeField(null=True)
     status = models.CharField(max_length=128, null=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True, blank=True)

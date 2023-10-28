@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/tailwindcss/dist/output.css">
+    <style>
+        @font-face {
+            font-family: 'Poppins-light';
+            src:url("../../static/fonts/Poppins/Poppins-light.ttf");
+        }
+
+        @font-face {
+            font-family: 'Poppins-medium';
+            src:url("/static/fonts/Poppins/Poppins-medium.ttf");
+        }
+
+        body{
+            font-family: 'Poppins-light';
+        }
+        
+
+        svg{
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+  <!-- component from  https://tailwindcomponents.com/  -->
+    <!-- component -->
+<div class="tw-max-w-md tw-mx-auto tw-p-4">
+    <!-- Chat Container -->
+    <div class="tw-bg-white tw-rounded-lg tw-shadow-md tw-p-4">
+      <!-- Chat Header -->
+      <div class="tw-flex tw-items-center tw-mb-4">
+        <div class="tw-ml-3">
+          <p class="tw-text-xl tw-font-medium">Your AI Assistant</p>
+          <p class="tw-text-gray-500">Online</p>
+        </div>
+      </div>
+  
+      <!-- Chat Messages -->
+      <div class="tw-space-y-4">
+        <!-- Received Message -->
+        <div class="tw-flex tw-items-start">
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              width="100"
+              height="100"
+              fill="#009688"
+              class="tw-w-8 tw-h-8 tw-rounded-full"
+              >
+  
+              <!-- Robot Face -->
+              <circle cx="50" cy="50" r="20" fill="#009688" />
+              <circle cx="50" cy="40" r="2" fill="#fff" />
+              <rect x="47" y="45" width="6" height="10" fill="#fff" />
+              <circle cx="50" cy="65" r="3" fill="#009688" />
+  
+              <!-- Robot Eyes -->
+              <circle cx="45" cy="45" r="3" fill="#fff" />
+              <circle cx="55" cy="45" r="3" fill="#fff" />
+              <circle cx="45" cy="45" r="1" fill="#000" />
+              <circle cx="55" cy="45" r="1" fill="#000" />
+  
+              <!-- Robot Antennas -->
+              <line x1="50" y1="30" x2="40" y2="20" stroke="#009688" stroke-width="2" />
+              <line x1="50" y1="30" x2="60" y2="20" stroke="#009688" stroke-width="2" />
+              </svg>
+          <div class="tw-ml-3 tw-bg-gray-100 tw-p-3 tw-rounded-lg">
+            <p class="tw-text-sm tw-text-gray-800">Hello! How can I help you today?</p>
+          </div>
+        </div>
+  
+        <!-- Sent Message -->
+        <div class="tw-flex tw-items-end tw-justify-end">
+          <div class="tw-bg-blue-500 tw-p-3 tw-rounded-lg">
+            <p class="tw-text-sm tw-text-white">Sure, I have a question.</p>
+          </div>
+          <img src="https://pbs.twimg.com/profile_images/1707101905111990272/Z66vixO-_normal.jpg" alt="Other User Avatar" class="tw-w-8 tw-h-8 tw-rounded-full tw-ml-3" />
+        </div>
+      </div>
+  
+      <!-- Chat Input -->
+      <div class="tw-mt-4 tw-flex tw-items-center">
+        <input
+          type="text"
+          placeholder="Type your message..."
+          class="tw-flex-1 tw-py-2 tw-px-3 tw-rounded tw-bg-gray-100 focus:tw-outline-blue-600 tw-border-0 tw-shadow-sm"
+        />
+        <button class="tw-bg-blue-500 tw-text-white tw-px-4 tw-py-2 tw-rounded-full tw-ml-3 hover:tw-bg-blue-600 tw-border-0 tw-shadow-sm">Send</button>
+      </div>
+    </div>
+  </div>
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css counters </title>
+    <style>
+        body{
+            counter-reset:section;
+        }
+        
+
+
+        h1::before{
+            counter-increment:section; 
+            content: "Section " counter(section) ": ";
+        }
+
+        h1{
+            counter-reset:subsection; 
+        }
+
+        h2::before{
+            counter-increment:subsection; 
+            content: "This is subsection " counter(subsection) " within the scope of h1";
+        }
+         
+         
+        /*The counter is going to count whatever you want it to count within the scope of where you defined counter-reset */
+          
+
+
+    </style>
+</head>
+<body>
+    <h1>
+        <h2></h2>
+        <h2></h2>
+    </h1>
+
+    <h1>
+        <h2></h2>
+    </h1>
+
+
+</body>
+</html>

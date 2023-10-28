@@ -1,0 +1,65 @@
+{% extends 'core/base.html' %}
+{% load widget_tweaks %}
+{% block title %}Add a new task{% endblock %}
+{% block main_content %}
+    <main class="tw-p-2">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="m-1">
+                <div>
+                    <label for="" class="tw-font-bold tw-py-2">Title: </label>
+                </div>
+                 <div>
+                    {% render_field form.title class="tw-flex-1 tw-py-2 tw-px-3 tw-rounded focus:tw-outline-theme-1 tw-border-0 tw-shadow-sm tw-w-full"%}
+                </div>
+            </div>
+            <div class="m-1">
+                <div>
+                    <label for="" class="tw-font-bold tw-py-2">Description (optional): </label>
+                </div>
+                 <div>
+                    {% render_field form.description class="tw-shadow-sm tw-flex-1 tw-py-2 tw-px-3 tw-rounded focus:tw-outline-theme-1 tw-border-0 tw-w-full"%}
+                </div>
+            </div>
+            <div class="m-1">
+                <div>
+                    <label for="" class="tw-font-bold tw-py-2">Date & Time: </label>
+                </div>
+                 <div class="tw-flex tw-gap-2">
+                    <div class="tw-flex-1">
+                        <div class="card tw-border-0 tw-p-2 shadow-sm tw-w-full">
+                            📆 Pick date
+                        </div>
+                    </div>
+                    <div class="tw-flex-1">
+                        <div class="card tw-border-0 tw-p-2 shadow-sm tw-w-full">
+                            🕧 Set time
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="m-1">
+                <div>
+                    <label for="" class="tw-font-bold tw-p-2">Label: </label>
+                </div>
+                 <div>
+                    {% render_field form.label class="tw-flex-1 tw-py-2 tw-px-3 tw-rounded focus:tw-outline-theme-1 tw-border-0 tw-shadow-sm tw-w-full"%}
+                </div>
+            </div>
+
+            <!-- <div class="m-1">
+                <div>
+                    <label for="" class="tw-font-bold tw-p-1">Status: </label>
+                </div>
+                 <div>
+                    {% render_field form.status class="tw-flex-1 tw-py-2 tw-px-3 tw-rounded focus:tw-outline-theme-1 tw-border-0 tw-shadow-sm tw-w-full"%}
+                </div>
+            </div> -->
+
+            <div class="m-1 mt-4">
+                <button class=" tw-bg-blue-500 tw-text-white tw-px-4 tw-py-2 tw-rounded hover:tw-bg-blue-600 tw-border-0 tw-shadow-sm">Create Task</button>
+            </div>
+                    
+        </form>
+    </main>
+{% endblock %}

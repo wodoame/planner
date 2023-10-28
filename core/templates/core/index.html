@@ -8,12 +8,35 @@
         <h3 class="tw-underline tw-underline-offset-8 m-2 mb-4">Events Today</h3>
       </div>
       <div class="cards mt-2 tw-grid lg:tw-grid-cols-3 tw-items-start">
+        <!-- <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><h6 class="dropdown-header">Dropdown header</h6></li> (optional)
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div> -->
             {% for task in today %}
-            <div class="card shadow-sm m-2 p-3 tw-border-s-4 tw-border-s-{{task.label.theme}}">
+            <div class="card tw-border-0 tw-rounded-md shadow-sm m-2 p-3 tw-border-s-4 tw-border-s-{{task.label.theme}}">
                  <div class="tw-flex tw-justify-between">
                     <h4 class="tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden">{{task.title}}</h4>
-                    <div class="tw-w-6">
-                        <svg class="tw-stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="12" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="18" r="1.5" fill="#ffffff"></circle> </g></svg>
+                    <div class="dropdown">
+                        <div class="tw-w-6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg class="tw-stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="12" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="18" r="1.5" fill="#ffffff"></circle> </g></svg>
+                        </div>
+
+                        <!-- tw-border-0 to get rid of bootstrap original borders -->
+
+                        <ul class="dropdown-menu tw-border-0 tw-shadow-lg tw-border-e-[3px] tw-border-e-{{task.label.theme}}">
+                            <li><h6 class="dropdown-header">Add a setting</h6></li>
+                            <li><a class="dropdown-item" href="#">New label</a></li>
+                            <li><a class="dropdown-item" href="#">Mark as done</a></li>
+                            <li><a class="dropdown-item" href="#">Edit description</a></li>
+                        </ul>
+
                     </div>
     
                  </div>
@@ -42,12 +65,35 @@
         <h3 class="tw-underline tw-underline-offset-8 m-2 mt-4 mb-4">Tomorrow</h3>
       </div>
       <div class="cards mt-2 tw-grid lg:tw-grid-cols-3 tw-items-start">
+        <!-- <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><h6 class="dropdown-header">Dropdown header</h6></li> (optional)
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div> -->
             {% for task in tomorrow %}
-            <div class="card shadow-sm m-2 p-3 tw-border-s-4 tw-border-s-{{task.label.theme}}">
+            <div class="card tw-border-0 tw-rounded-md shadow-sm m-2 p-3 tw-border-s-4 tw-border-s-{{task.label.theme}}">
                  <div class="tw-flex tw-justify-between">
                     <h4 class="tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden">{{task.title}}</h4>
-                    <div class="tw-w-6">
-                        <svg class="tw-stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="12" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="18" r="1.5" fill="#ffffff"></circle> </g></svg>
+                    <div class="dropdown">
+                        <div class="tw-w-6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg class="tw-stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="12" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="18" r="1.5" fill="#ffffff"></circle> </g></svg>
+                        </div>
+
+                        <!-- tw-border-0 to get rid of bootstrap original borders -->
+
+                        <ul class="dropdown-menu tw-border-0 tw-shadow-lg tw-border-e-[3px] tw-relative tw-z-[1] tw-border-e-{{task.label.theme}}">
+                            <li><h6 class="dropdown-header">Add a setting</h6></li>
+                            <li><a class="dropdown-item" href="#">New label</a></li>
+                            <li><a class="dropdown-item" href="#">Mark as done</a></li>
+                            <li><a class="dropdown-item" href="#">Edit description</a></li>
+                        </ul>
+
                     </div>
     
                  </div>
@@ -68,7 +114,7 @@
                 </div>
             </div>
             {% endfor %}
-        </div>
+      </div>
         {% endif %}
     
     {% if upcoming %}
@@ -76,12 +122,35 @@
         <h3 class="tw-underline tw-underline-offset-8 m-2 mt-4 mb-4">Upcoming Events</h3>
       </div>
       <div class="cards mt-2 tw-grid lg:tw-grid-cols-3 tw-items-start">
+        <!-- <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><h6 class="dropdown-header">Dropdown header</h6></li> (optional)
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div> -->
             {% for task in upcoming %}
-            <div class="card shadow-sm m-2 p-3 tw-border-s-4 tw-border-s-{{task.label.theme}}">
+            <div class="card tw-border-0 tw-rounded-md shadow-sm m-2 p-3 tw-border-s-4 tw-border-s-{{task.label.theme}}">
                  <div class="tw-flex tw-justify-between">
                     <h4 class="tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden">{{task.title}}</h4>
-                    <div class="tw-w-6">
-                        <svg class="tw-stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="12" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="18" r="1.5" fill="#ffffff"></circle> </g></svg>
+                    <div class="dropdown">
+                        <div class="tw-w-6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg class="tw-stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="12" r="1.5" fill="#ffffff"></circle> <circle cx="12" cy="18" r="1.5" fill="#ffffff"></circle> </g></svg>
+                        </div>
+
+                        <!-- tw-border-0 to get rid of bootstrap original borders -->
+
+                        <ul class="dropdown-menu tw-border-0 tw-shadow-lg tw-border-e-[3px] tw-border-e-{{task.label.theme}}">
+                            <li><h6 class="dropdown-header">Add a setting</h6></li>
+                            <li><a class="dropdown-item" href="#">New label</a></li>
+                            <li><a class="dropdown-item" href="#">Mark as done</a></li>
+                            <li><a class="dropdown-item" href="#">Edit description</a></li>
+                        </ul>
+
                     </div>
     
                  </div>
@@ -102,7 +171,7 @@
                 </div>
             </div>
             {% endfor %}
-        </div>
+      </div>
         {% endif %}
 </div>
 {% endblock %}

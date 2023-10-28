@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align content</title>
+    <style>
+       .boxes{
+        padding:1rem;
+        height: auto;
+        display:flex;
+        align-items:last baseline;
+        /*
+        width:300px;
+        */
+        
+        gap:1rem;
+        outline:2px solid black;
+       }
+        
+       .box{
+        outline:2px solid navy;
+        flex-shrink:1;
+       }
+
+       .container{
+        margin-top:1rem;
+         display:flex;
+         outline:2px solid black;
+         gap:1rem;
+         padding:1rem; 
+       }
+
+       .item{
+        outline:2px solid navy;
+       }
+
+       .item-2{
+        /*
+        
+        flex-shrink:1; 
+        flex-basis:500px;
+        */
+        flex: 0 1 500px;
+       }
+
+
+       
+       
+    </style>
+</head>
+<body>
+    <div class="boxes">
+          <div class="box box-1">1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, magni?</div>
+          <div class="box box-2">2. Lorem ipsum dolor sit amet.</div>
+          <div class="box box-3">3. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati est quis ea molestiae earum officia explicabo aperiam nobis quibusdam nisi.</div>
+          <div class="box box-4">4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, culpa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempore quis iusto, magni adipisci minus!</div>
+          <div class="box box-5">5. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati est quis ea molestiae earum officia explicabo aperiam nobis quibusdam nisi.</div>
+    </div>
+
+    <div class="container">
+        <div class="item-1 item">Lorem, ipsum.</div>
+        <div class="item-2 item">Lorem, ipsum dcing elit.  ab placeat, veritatisbore quis recusandae velit qui ab assumenda deleniti ipsum numqeriam minus sequi rerum.</div>
+    </div>
+</body>
+</html>

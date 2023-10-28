@@ -12,6 +12,7 @@ module.exports = {
         'theme-2': '#9B51E0', 
         'theme-3':'#ED9B2F', 
         'theme-4':'#335F3E',
+        'dark-theme': '#0F0F0F',
       }
     },
   },
