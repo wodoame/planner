@@ -35,6 +35,8 @@ class Task(models.Model):
     status = models.CharField(max_length=128, null=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     
+    class Meta:
+        ordering = ['deadline']
     
     def __str__(self) -> str:
         return self.title[:25] + '...'

@@ -2,7 +2,7 @@
 {% load widget_tweaks %}
 {% block title %}Add a new task{% endblock %}
 {% block main_content %}
-    <main class="tw-p-2">
+    <main class="tw-p-2 tw-pb-12">
         <form action="" method="POST">
             {% csrf_token %}
             <div class="m-1">
@@ -30,7 +30,7 @@
                        <input type="date" name="date" class="tw-shadow-sm tw-py-2 tw-px-3 tw-rounded focus:tw-outline-theme-1 tw-border-0 tw-w-full">
                     </div>
                     <div class="tw-flex-1">
-                        <input type="time" name="time"  class="tw-shadow-sm tw-py-2 tw-px-3 tw-rounded focus:tw-outline-theme-1 tw-border-0 tw-w-full">
+                        <input type="time" name="time" class="tw-shadow-sm tw-py-2 tw-px-3 tw-rounded focus:tw-outline-theme-1 tw-border-0 tw-w-full">
                     </div>
                  </div>
             </div>
@@ -53,7 +53,7 @@
             </div>
 
             <div class="m-1 mt-4 tw-flex tw-justify-center">
-                <button class=" tw-bg-blue-500 tw-text-white tw-px-4 tw-py-2 tw-rounded hover:tw-bg-blue-600 tw-border-0 tw-shadow-sm">Create Task</button>
+                <button class=" tw-bg-blue-500 tw-text-white tw-px-4 tw-py-2 tw-rounded hover:tw-bg-blue-600 tw-border-0 tw-shadow-sm">Update Task</button>
             </div>
                     
         </form>

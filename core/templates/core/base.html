@@ -34,30 +34,34 @@
     </style>
 
 </head>
-<body class="tw-bg-slate-100 tw-min-h-screen">
+<body class="tw-bg-slate-100">
     {% block main_content %}
     {% endblock %}
 
-    <nav class="lg:tw-hidden tw-fixed tw-z-[2] tw-bottom-0 tw-flex tw-justify-between tw-w-full lg:tw-p-4 tw-p-2 tw-px-5 tw-shadow-sm tw-bg-dark-theme">
-    <div class="tw-w-6 home-icon">
+    <nav class="lg:tw-hidden tw-fixed tw-z-[2] tw-bottom-0 tw-left-0 tw-flex tw-justify-between tw-w-full lg:tw-p-4 tw-p-2 tw-px-5 tw-shadow-sm tw-bg-dark-theme">
+    <a class="tw-w-6 home-icon" href="{% url 'index' %}">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"/>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
             <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3103 1.77586C11.6966 1.40805 12.3034 1.40805 12.6897 1.77586L20.6897 9.39491L23.1897 11.7759C23.5896 12.1567 23.605 12.7897 23.2241 13.1897C22.8433 13.5896 22.2103 13.605 21.8103 13.2241L21 12.4524V20C21 21.1046 20.1046 22 19 22H14H10H5C3.89543 22 3 21.1046 3 20V12.4524L2.18966 13.2241C1.78972 13.605 1.15675 13.5896 0.775862 13.1897C0.394976 12.7897 0.410414 12.1567 0.810345 11.7759L3.31034 9.39491L11.3103 1.77586ZM5 10.5476V20H9V15C9 13.3431 10.3431 12 12 12C13.6569 12 15 13.3431 15 15V20H19V10.5476L12 3.88095L5 10.5476ZM13 20V15C13 14.4477 12.5523 14 12 14C11.4477 14 11 14.4477 11 15V20H13Z" fill="#ffffff"/> </g>
         </svg>    
-    </div>
+    </a>
 
     <div class="tw-w-6">
         <svg class="tw-stroke-white" fill="#000000" viewBox="0 0 24 24" id="retweet" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg" class="icon flat-line"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M14,6H4A1,1,0,0,0,3,7V17a1,1,0,0,0,1,1H6" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-2" data-name="primary" d="M10,18H20a1,1,0,0,0,1-1V7a1,1,0,0,0-1-1H18" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><polyline id="primary-3" data-name="primary" points="12 4 14 6 12 8" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></polyline><polyline id="primary-4" data-name="primary" points="12 20 10 18 12 16" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></polyline></g></svg>                       
     </div>
 
-    <div class="tw-w-6">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <a class="tw-w-6 plus-icon" href="{% url 'create-task' %}">
+        <!-- <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"/>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
             <g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g> 
-        </svg>    
-    </div>
+        </svg>     -->
+
+        <svg class="tw-stroke-white" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+        </svg>
+    </a>
 
     <div class="tw-w-6">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
